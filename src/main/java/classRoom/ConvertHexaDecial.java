@@ -1,6 +1,6 @@
 package classRoom;
 
-public class ConvertHexa {
+public class ConvertHexaDecial {
 //
 //	For positive Numbers:
 //		Find the fraction
