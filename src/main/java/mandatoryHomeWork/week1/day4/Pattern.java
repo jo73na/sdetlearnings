@@ -5,11 +5,11 @@ public class Pattern {
 	public static void main(String[] args) {
 		
 		  pattern1(5); pattern2(5); pattern3(5); pattern4(5); pattern5(5); pattern6(5);
-		  pattern7(5); pattern8(5); pattern9(5); pattern10(5);
-		 
-	//	pattern9(5);
-		pattern11(5);
+		  pattern7(5); pattern8(5); pattern9(5); pattern10(5);pattern11(5);pattern12(5);
+		
 	}
+
+	
 
 	static void pattern1(int n) {
 		System.out.println("Pattern1----------------");
@@ -137,4 +137,34 @@ public class Pattern {
 			System.out.println();
 		}
 	}
+	
+	 public static void pattern12(int gvn){
+         //Upper triangle
+           for (int i=gvn;i>0;i--){
+               //spaces
+               for (int spc = 0 ; spc<gvn-i;spc++){
+                   System.out.print(" ");
+               }
+               for(int j = i ;j>0;j-- ){
+                   System.out.print("* ");
+               }
+               if(i != 1) System.out.println();
+           }
+
+     //lower triangle
+     for (int i=0;i<=gvn;i++){
+         //spaces
+         for (int spc = gvn-i; spc>0;spc--){
+             System.out.print(" ");
+         }
+         for (int j= 0;j<i;j++){
+             System.out.print("* ");
+         }
+         System.out.println();
+     }
+
+
+
+ }
+	
 }
