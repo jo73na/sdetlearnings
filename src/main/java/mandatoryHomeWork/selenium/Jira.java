@@ -1,4 +1,4 @@
-package Selenium;
+package mandatoryHomeWork.selenium;
 
 import java.awt.AWTException;
 import java.awt.Dimension;

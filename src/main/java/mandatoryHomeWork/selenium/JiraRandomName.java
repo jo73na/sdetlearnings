@@ -1,4 +1,4 @@
-package Selenium;
+package mandatoryHomeWork.selenium;
 
 import static org.testng.Assert.assertEquals;
 
