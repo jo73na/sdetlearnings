@@ -17,12 +17,14 @@ public class CeasarCipher {
 		char con = 'Z';
 		int k = 2;
 		//System.out.println((con + k > 90 && con <= 90) ? (char) (((con + k) % 90 + 64)) : (char) (con + k));
-		if ((int) con > 65 || (int) con < 90) {
-			System.out.println ((con + k > 90) ? (char) (((con + k) % 90 + 64)) : (char) (con + k));
-		}
+		/*
+		 * if ((int) con > 65 || (int) con < 90) { System.out.println ((con + k > 90) ?
+		 * (char) (((con + k) % 90 + 64)) : (char) (con + k)); }
+		 */
 	}
 
 	public static String caesarCipher(String s, int k) {
+		System.out.println('a'-96);
 		int left = 0;
 		int right = s.length() - 1;
 		char[] arr = s.toCharArray();
