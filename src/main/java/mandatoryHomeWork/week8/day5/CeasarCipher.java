@@ -1,4 +1,4 @@
-package mandatoryHomeWork.week9.day2;
+package mandatoryHomeWork.week8.day5;
 
 import java.util.Arrays;
 import java.util.Iterator;
