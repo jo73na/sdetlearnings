@@ -12,10 +12,10 @@ int findMaxK = findMaxK(nums);
 System.out.println(findMaxK);
 	}
 	 public static int findMaxK(int[] nums) {
-		 Arrays.sort(nums);
+		Arrays.sort(nums);
 		int l=0;
 		int r=nums.length-1;
-		int max=nums[r];
+		//int max=nums[r];
 		while (l<r) {
 			if(-nums[l]==nums[r]) {
 				return nums[r];

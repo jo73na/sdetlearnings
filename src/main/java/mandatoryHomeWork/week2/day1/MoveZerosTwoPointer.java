@@ -10,7 +10,7 @@ public class MoveZerosTwoPointer {
 	// continue the fast pointers.
 
 	public static void main(String[] args) {
-		int[] num={0,0,0,3,12};
+		int[] num={0,2,0,3,12};
 		int[] moveZeros = moveZeros(num);
 		System.out.println(Arrays.toString(moveZeros));
 
