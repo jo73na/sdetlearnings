@@ -7,7 +7,7 @@ public class BackspaceCompare {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-String s = "ad#c";
+String s = "#.....";
 backspaceCompareWithoutStack(s, s);
 
 	}
@@ -44,12 +44,11 @@ int end = s.length();
 while (start < end && fast < end) {
 	//annd
 	//     s
-	while ( arr[fast]=='#') {
-		
-		arr[start] = '\0';
-		arr[fast] = '\0';
+	while ( arr[fast]=='.' && arr[start]=='#') {
+	
+		swap(arr,start,fast);
 		//
-		while (start > 0 && arr[start] == '\0') {
+		while (start > 0 && arr[start] == '.') {
 			start--;
 		}
 		if (fast < end - 1) {
@@ -62,4 +61,11 @@ while (start < end && fast < end) {
 System.out.println(Arrays.toString(arr));
 System.out.println(arr.equals(arr));
 }
+
+	private static void swap(char[] arr, int start, int fast) {
+		char c=arr[start] ;
+		arr[start]=arr[fast] ;
+		arr[fast]=c;
+		
+	}
 }

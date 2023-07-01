@@ -1,6 +1,6 @@
 package ownProblemsRef;
 
-public class PalindromeSLL {
+public class PalindromeSLL extends ListNode{
 
 	public static void main(String[] args) {
 		ListNode n9 = new ListNode(1, null);
@@ -18,22 +18,7 @@ public class PalindromeSLL {
 		System.out.println(maxTwin);
 	}
 
-	public static class ListNode {
-		int val;
-		ListNode next;
 
-		ListNode() {
-		}
-
-		ListNode(int val) {
-			this.val = val;
-		}
-
-		ListNode(int val, ListNode next) {
-			this.val = val;
-			this.next = next;
-		}
-	}
 
 	public static int halfMethod(ListNode head) {
 
