@@ -23,7 +23,6 @@ public class Amazon {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
-
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions chrOpt = new ChromeOptions();
 		chrOpt.addArguments("--remote-allow-origins=*");
@@ -31,6 +30,8 @@ public class Amazon {
 		chrOpt.addArguments("--incognito");
 		WebDriver driver = new ChromeDriver(chrOpt);
 		driver.get("https://www.amazon.in/");
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+	
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("//label[text()='Search
 		// Amazon.in']/following::input")));
