@@ -69,7 +69,6 @@ public class MMT {
 
 		dvr.findElement(By.xpath("(//div[@class='viewFareBtnCol  ']/div/following-sibling::button)[2]")).click();
 
-		String currentWindow = dvr.getWindowHandle();
 
 		Set<String> allWindows = dvr.getWindowHandles();
 
