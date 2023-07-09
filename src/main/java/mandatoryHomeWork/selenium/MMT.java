@@ -10,16 +10,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.convert.DurationStyle;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class MMT {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-
-		ChromeDriver dvr = new ChromeDriver(options);
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("--remote-allow-origins=*");
+		ChromeDriver dvr = new ChromeDriver(opt);
+		dvr.get("https://www.makemytrip.com/");
 		dvr.manage().window().maximize();
+		Thread.sleep(2000);
 
 		dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 
