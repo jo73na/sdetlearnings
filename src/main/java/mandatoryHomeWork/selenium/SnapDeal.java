@@ -14,19 +14,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class SnapDeal {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--remote-allow-origins=*");
-
 		ChromeDriver dvr = new ChromeDriver(opt);
-
+		dvr.get("https://www.goibibo.com/");
 		dvr.manage().window().maximize();
-
-		dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		Thread.sleep(2000);
 
 
 		dvr.get("https://www.snapdeal.com/");
