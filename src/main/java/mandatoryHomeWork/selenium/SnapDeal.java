@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -83,7 +84,7 @@ public class SnapDeal {
 
 		WebElement picture = dvr.findElement(By.tagName("picture"));
 		Actions act = new Actions(dvr);
-		act.moveToElement(picture).perform();
+		act.moveToElement(picture).build().perform();
 
 		dvr.findElement(By.xpath("//div[contains(text(),\"Quick View\")]")).click();
 
@@ -95,7 +96,7 @@ public class SnapDeal {
 		System.out.println("cost of the shoes : " + " " + cost);
 
 		System.out.println("Discount price of the shoes : "+ Discountprice);
-
+			byte[] screenshotAs = ((TakesScreenshot) dvr).getScreenshotAs(OutputType.BYTES);
 		TakesScreenshot screenShot = (TakesScreenshot) dvr;
 
 		File source = screenShot.getScreenshotAs(OutputType.FILE);
@@ -107,6 +108,8 @@ public class SnapDeal {
 		dvr.findElement(By.xpath("//div[@class='close close1 marR10']")).click();
 
 		dvr.close();
+		
+		
 
 	}
 
